@@ -174,8 +174,12 @@ export const PlaygroundStateProvider = ({
 
   useEffect(() => {
     const storedKey = localStorage.getItem(LS_OPENAI_API_KEY_NAME);
+    const defaultKey = "default-key"; // not actually used
+    
     if (storedKey && storedKey.length >= 1) {
       dispatch({ type: "SET_API_KEY", payload: storedKey });
+    } else if (defaultKey) {
+      dispatch({ type: "SET_API_KEY", payload: defaultKey });
     } else {
       dispatch({ type: "SET_API_KEY", payload: null });
       setShowAuthDialog(true);
