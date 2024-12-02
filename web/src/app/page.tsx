@@ -12,9 +12,9 @@ export async function generateMetadata({
 }: {
   searchParams: { [key: string]: string | string[] | undefined };
 }): Promise<Metadata> {
-  let title = "Realtime Playground";
+  let title = "Persona AI";
   let description =
-    "Speech-to-speech playground for OpenAI's new Realtime API. Built on LiveKit Agents.";
+    "Speech-to-speech interview platform for hiring.";
 
   const presetId = searchParams?.preset;
   if (presetId) {
@@ -22,8 +22,8 @@ export async function generateMetadata({
       (preset) => preset.id === presetId,
     );
     if (selectedPreset) {
-      title = `Realtime Playground`;
-      description = `Speak to a "${selectedPreset.name}" in a speech-to-speech playground for OpenAI's new Realtime API. Built on LiveKitAgents.`;
+      title = `Persona AI`;
+      description = `Speak to a "${selectedPreset.name}" in a speech-to-speech interview platform for hiring.`;
     }
   }
 
@@ -34,7 +34,7 @@ export async function generateMetadata({
       title,
       description,
       type: "website",
-      url: "https://playground.livekit.io/",
+      url: "https://persona-ai-production.up.railway.app/",
       images: [
         {
           url: "https://playground.livekit.io/og-image.png",
