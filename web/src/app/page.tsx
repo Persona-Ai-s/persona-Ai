@@ -37,7 +37,7 @@ export async function generateMetadata({
       url: "https://persona-ai-production.up.railway.app/",
       images: [
         {
-          url: "https://playground.livekit.io/og-image.png",
+          url: "https://persona-ai-production.up.railway.app/og-image.png",
           width: 1200,
           height: 675,
           type: "image/png",
