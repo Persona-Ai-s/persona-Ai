@@ -256,7 +256,7 @@ export function TranscriptAnalysis() {
         <h3 className="text-l pt-3 font-bold mb-4">Technical Skills</h3>
         <p className="mt-1 text-sm pb-4 text-gray-600">{assessment.technical_skills.evidence}</p>
         <div className="grid grid-cols-3 gap-4">
-          {assessment.technical_skills.skills.map((skill, index) => (
+          {assessment.technical_skills.skills.map((skill: any, index: any) => (
             <div key={index} className="relative" title={skill.evidence}>
               <Dial value={skill.score} label={skill.name} tooltip={skill.evidence} />
             </div>
@@ -269,7 +269,7 @@ export function TranscriptAnalysis() {
         <h3 className="text-l pt-3 font-bold mb-4">Communication</h3>
         <p className="mt-1 text-sm text-gray-600 pb-4">{assessment.communication.overall.evidence}</p>
         <div className="grid grid-cols-3 gap-4">
-          {Object.entries(assessment.communication).map(([key, item]) => (
+          {Object.entries(assessment.communication).map(([key, item]: any) => (
             <div key={key} className="relative" title={item.evidence}>
               <Dial value={item.score} label={key.charAt(0).toUpperCase() + key.slice(1)} tooltip={item.evidence} color="green" />
             </div>
@@ -282,7 +282,7 @@ export function TranscriptAnalysis() {
         <h3 className="text-l pt-3 font-bold mb-4">Soft Skills</h3>
         <p className="mt-1 text-sm pb-4 text-gray-600">{assessment.soft_skills.evidence}</p>
         <div className="grid grid-cols-3 gap-4">
-          {Object.entries(assessment.soft_skills).map(([key, item]) => (
+          {Object.entries(assessment.soft_skills).map(([key, item]: any) => (
             <div key={key} className="relative" title={item.evidence}>
               <Dial value={item.score} label={key.charAt(0).toUpperCase() + key.slice(1)} tooltip={item.evidence} color="purple" />
             </div>
