@@ -15,6 +15,7 @@ import { ChatControls } from "@/components/chat-controls";
 import { useAgent } from "@/hooks/use-agent";
 import { useConnection } from "@/hooks/use-connection";
 import { toast } from "@/hooks/use-toast";
+import { TranscriptAnalysis } from "./transcript-analysis";
 
 export function Chat() {
   const connectionState = useConnectionState();
@@ -119,15 +120,19 @@ export function Chat() {
       <div className="flex flex-col flex-grow items-center lg:justify-between mt-12 lg:mt-0">
         <div className="w-full h-full flex flex-col">
           <div className="flex items-center justify-center w-full">
-            <div className="lg:hidden w-full">
+            <div className="lg:hidden w-full" style={{ height: "60vh", overflow: "scroll" }}>
               {isChatRunning && !isEditingInstructions ? (
                 renderVisualizer()
               ) : (
-                <Instructions />
+                <>
+                  {/* <Instructions /> */}
+                  <TranscriptAnalysis />
+                </>
               )}
             </div>
-            <div className="hidden lg:block w-full">
-              <Instructions />
+            <div className="hidden lg:block w-full" style={{ height: "60vh", overflow: "scroll" }}>
+              {/* <Instructions /> */}
+              <TranscriptAnalysis />
             </div>
           </div>
           <div className="grow h-full flex items-center justify-center">

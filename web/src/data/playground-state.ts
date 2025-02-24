@@ -36,7 +36,7 @@ export const defaultSessionConfig: SessionConfig = {
   temperature: 0.8,
   maxOutputTokens: null,
   vadThreshold: 0.5,
-  vadSilenceDurationMs: 1000,
+  vadSilenceDurationMs: 3000,
   vadPrefixPaddingMs: 300,
 };
 
