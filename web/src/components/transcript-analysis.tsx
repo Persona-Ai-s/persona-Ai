@@ -243,7 +243,7 @@ export function TranscriptAnalysis() {
         <section>
           <h3 className="text-l pt-3 font-bold mb-4">Interview Completeness</h3>
           <div className="grid grid-cols-3 gap-4">
-            {Object.entries(assessment.interview_completeness).map(([key, item]) => (
+            {Object.entries(assessment.interview_completeness).map(([key, item]: any) => (
               <div key={key} className="relative" title={item.evidence}>
                 <Dial value={item.score} label={key.charAt(0).toUpperCase() + key.slice(1)} tooltip={item.evidence} color="blue" />
               </div>
@@ -298,9 +298,9 @@ export function TranscriptAnalysis() {
         </h3>
         <div className="mb-4 border p-4 rounded">
           <p className="font-bold">Response:</p>
-          <p className="mt-1">"{assessment.best_response.response}"</p>
+          <p className="mt-1">{assessment.best_response.response}</p>
           <p className="font-bold mt-2">Explanation:</p>
-          <p className="mt-1">"{assessment.best_response.explanation}"</p>
+          <p className="mt-1">{assessment.best_response.explanation}</p>
         </div>
       </section>
       
