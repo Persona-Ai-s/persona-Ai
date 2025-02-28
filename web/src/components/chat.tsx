@@ -84,13 +84,13 @@ export function Chat() {
     setIsEditingInstructions(!isEditingInstructions);
 
   const renderVisualizer = () => (
-    <div className="flex w-full items-center">
-      <div className="h-[320px] mt-16 md:mt-0 lg:pb-24 w-full">
+    <div className="flex w-full items-center absolute bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-transparent">
+      <div className=" mt-16 md:mt-0 lg:pb-16 w-full">
         <BarVisualizer
           state={state}
           barCount={5}
           trackRef={audioTrack}
-          className="w-full h-full"
+          className="h-full"
         />
       </div>
     </div>

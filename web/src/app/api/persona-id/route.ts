@@ -17,6 +17,7 @@ const prompt = `
   You are tasked with assessing a candidate’s interview where they walk through their CV. Focus solely on evaluating the candidate’s performance in terms of their technical expertise, communication abilities, soft skills, and overall presentation. Use the transcript below and the provided instructions to generate a detailed JSON report.
   You should ask for their experience in at least 3 different roles (if the have any).
   Once you the candidate has exhausted his experience on his CV You should ask for open ended questions. 
+
   **Transcript**: 
   ${transcript}
 

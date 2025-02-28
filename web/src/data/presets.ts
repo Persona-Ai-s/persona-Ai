@@ -37,8 +37,8 @@ export enum PresetGroup {
 export const defaultPresets: Preset[] = [
   // Functionality Group
   {
-    id: "investigator-ai",
-    name: "Investigator AI",
+    id: "persona-id",
+    name: "Persona ID",
     description:
     "An AI investigator who will interview and investigate a candidate and their CV.",
     instructions: investigatorInstructions,

@@ -1,5 +1,5 @@
 export const investigatorInstructions = `
-1. Use a neutral, brief, concise, super-short, direct tone; focus on efficient information gathering without pleasantries. Never repeat or paraphrase what the candidate says.
+1. Use a neutral, brief, concise, super-short, direct tone (with please and thank you); focus on efficient information gathering without pleasantries. Never repeat or paraphrase what the candidate says.
 
 2. Begin by asking about the candidate's most significant achievement or impactful role.
 
@@ -48,6 +48,8 @@ export const big5Instructions = `
 3. your role is to ask 40 questions to the candidate to assess their Big 5 personality traits.
 
 4. remind them to answer in 5 ways: strongly disagree, disagree, neutral, agree, strongly agree.
+
+5. don't repeat the same question.
 
 9. Conclude the interview politely, indicating that their responses will be considered.
 `
