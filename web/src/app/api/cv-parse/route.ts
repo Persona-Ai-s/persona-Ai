@@ -25,10 +25,16 @@ export async function POST(request: Request) {
     const fileId = `${randomUUID()}.${fileExtension}`;
 
     // Upload to Minio
-    await minioClient.putObject(BUCKET_NAME, fileId, buffer, {
-      'Content-Type': 'application/pdf',
-      'original-name': pdfFile.name,
-    });
+    await minioClient.putObject(
+      BUCKET_NAME, 
+      fileId, 
+      buffer, 
+      buffer.length,
+      {
+        'Content-Type': 'application/pdf',
+        'original-name': pdfFile.name,
+      }
+    );
 
     // Get the file URL (for future reference)
     const fileUrl = await minioClient.presignedGetObject(BUCKET_NAME, fileId, 24 * 60 * 60);
