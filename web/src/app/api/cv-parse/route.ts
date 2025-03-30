@@ -1,5 +1,4 @@
-import { OpenAI } from "openai";
-import { minioClient, BUCKET_NAME, initializeBucket } from "@/lib/minio";
+import { BUCKET_NAME, initializeBucket, minioClient } from "@/lib/minio";
 import { randomUUID } from "crypto";
 
 export async function POST(request: Request) {
