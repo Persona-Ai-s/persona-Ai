@@ -6,6 +6,7 @@ import Heart from "@/assets/heart.svg";
 // import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { defaultPresets } from "@/data/presets";
 import { Metadata } from "next";
+import Link from "next/link";
 
 export async function generateMetadata({
   searchParams,
@@ -52,7 +53,15 @@ export default function Dashboard() {
   return (
     <div className="flex flex-col h-full bg-neutral-100">
       <header className="flex flex-shrink-0 h-12 items-center justify-between px-4 w-full md:mx-auto">
-        <LK />
+        <div className="flex items-center gap-6">
+          <LK />
+          <Link 
+            href="/cv-analysis"
+            className="text-sm font-semibold hover:opacity-70 transition-all duration-250"
+          >
+            CV Analysis
+          </Link>
+        </div>
         {/* <Auth /> */}
       </header>
       <main className="flex flex-col flex-grow overflow-hidden p-0 md:p-2 md:pt-0 w-full md:mx-auto">
